@@ -1,6 +1,7 @@
 <?php
 namespace PavanKataria\BoilerplateApi\Http\Controllers;
 
+use PavanKataria\BoilerplateApi\Http\ApiResponseManager;
 use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
