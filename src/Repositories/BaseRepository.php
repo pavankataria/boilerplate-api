@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Repositories;
+namespace PavanKataria\BoilerplateApi\Repositories;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassAssignmentException;
 use Illuminate\Database\Eloquent\Model;
+
+
 use PavanKataria\BoilerplateApi\Responses\PKResponseResource;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateSuccessful;
@@ -13,7 +15,6 @@ use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignmentError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateSuccessful;
-use Ramsey\Uuid\Uuid;
 
 /**
  * Class BaseRepository

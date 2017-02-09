@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace PavanKataria\BoilerplateApi\Http\Controllers;
 
 use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use Illuminate\Http\Request;
@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\App;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Item;
 use League\Fractal\Resource\Collection;
-use App\Http\ApiResponseManager;
-use App\Repositories\BaseRepository;
+
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateSuccessful;
@@ -19,7 +18,7 @@ use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignment
 
 /**
  * Class ApiController
- * @package App\Http\Controllers
+ * @package PavanKataria\BoilerplateApi\Http\Controllers
  */
 class ApiController extends Controller {
 
