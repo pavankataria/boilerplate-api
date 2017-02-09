@@ -8,7 +8,8 @@
 
 namespace PavanKataria\BoilerplateApi\Http;
 
-use Illuminate\Http\Response;
+//use Response;
+use Illuminate\Support\Facades\Response;
 use PavanKataria\BoilerplateApi\Responses\PKResponse;
 
 /**
