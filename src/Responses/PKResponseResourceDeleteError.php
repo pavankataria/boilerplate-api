@@ -6,10 +6,10 @@
  * Time: 16:09
  */
 
-namespace App\Http\Responses;
+namespace PavanKataria\BoilerplateApi\Responses;
 
 
-use App\Http\Responses;
+use PavanKataria\BoilerplateApi\Responses;
 
 class PKResponseResourceDeleteError extends PKResponse{
     function __construct()

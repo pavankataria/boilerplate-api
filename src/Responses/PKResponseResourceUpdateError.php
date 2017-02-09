@@ -6,7 +6,7 @@
  * Time: 12:20
  */
 
-namespace App\Http\Responses;
+namespace PavanKataria\BoilerplateApi\Responses;
 
 
 use Illuminate\Http\Response;

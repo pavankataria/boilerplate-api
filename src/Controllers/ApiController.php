@@ -1,8 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Http\Responses\PKResponseBadRequest;
-use App\Http\Responses\PKResponseResourceConflictError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use League\Fractal\Manager;
@@ -10,12 +9,12 @@ use League\Fractal\Resource\Item;
 use League\Fractal\Resource\Collection;
 use App\Http\ApiResponseManager;
 use App\Repositories\BaseRepository;
-use App\Http\Responses\PKResponseResourceNotFound;
-use App\Http\Responses\PKResponseResourceCreateError;
-use App\Http\Responses\PKResponseResourceCreateSuccessful;
-use App\Http\Responses\PKResponseResourceDeleteSuccessful;
-use App\Http\Responses\PKResponseResourceUpdateSuccessful;
-use App\Http\Responses\PKResponseResourceUpdateMassAssignmentError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceDeleteSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignmentError;
 
 
 /**

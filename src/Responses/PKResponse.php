@@ -6,15 +6,15 @@
  * Time: 11:58
  */
 
-namespace App\Http\Responses;
+namespace PavanKataria\BoilerplateApi\Responses;
 
 /**
  * Class PKResponse
- * @package App\Http\Responses
+ * @package PavanKataria\BoilerplateApi\Responses
  */
 /**
  * Class PKResponse
- * @package App\Http\Responses
+ * @package PavanKataria\BoilerplateApi\Responses
  */
 abstract class PKResponse {
     const RESPONSE_ERROR = 'error';

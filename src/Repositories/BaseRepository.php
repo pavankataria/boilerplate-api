@@ -5,14 +5,14 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassAssignmentException;
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Responses\PKResponseResource;
-use App\Http\Responses\PKResponseResourceCreateError;
-use App\Http\Responses\PKResponseResourceCreateSuccessful;
-use App\Http\Responses\PKResponseResourceDeleteSuccessful;
-use App\Http\Responses\PKResponseResourceNotFound;
-use App\Http\Responses\PKResponseResourceUpdateError;
-use App\Http\Responses\PKResponseResourceUpdateMassAssignmentError;
-use App\Http\Responses\PKResponseResourceUpdateSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResource;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceDeleteSuccessful;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignmentError;
+use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateSuccessful;
 use Ramsey\Uuid\Uuid;
 
 /**
