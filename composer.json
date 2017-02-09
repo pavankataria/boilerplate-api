@@ -3,7 +3,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/pavankataria/BoilerplateApi"
+            "url": "https://github.com/pavankataria/boilerplate-api"
         }
     ],
     "description": "Boiler plate classes aiding API creation for Laravel, Lumen, and all your other PHP projects.",
