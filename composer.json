@@ -1,5 +1,11 @@
 {
     "name": "pavankataria/boilerplate-api",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/pavankataria/BoilerplateApi"
+        }
+    ],
     "description": "Boiler plate classes aiding API creation for Laravel, Lumen, and all your other PHP projects.",
     "type": "library",
     "require": {
