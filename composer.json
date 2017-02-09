@@ -1,0 +1,16 @@
+{
+    "name": "pavankataria/boilerplate-api",
+    "description": "Boiler plate classes aiding API creation for Laravel and Lumen.",
+    "type": "library",
+    "require": {
+        "ramsey/uuid": "^3.5"
+    },
+    "license": "GNU GPLv3",
+    "authors": [
+        {
+            "name": "Pavan Kataria",
+            "email": "info@pavankataria.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
