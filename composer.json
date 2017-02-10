@@ -11,7 +11,7 @@
     "require": {
         "laravel/framework": "5.3.* | 5.4.*",
         "ramsey/uuid": "^3.5",
-        "league/fractal": "^0.12.0"
+        "league/fractal": "^0.15.0"
     },
     "license": "GNU GPLv3",
     "authors": [
