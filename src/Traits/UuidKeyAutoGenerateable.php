@@ -6,7 +6,7 @@
  * Time: 18:13
  */
 
-namespace App\Traits;
+namespace PavanKataria\BoilerplateApi\Traits;
 
 
 use Ramsey\Uuid\Uuid;

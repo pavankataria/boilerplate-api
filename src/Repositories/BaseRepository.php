@@ -15,6 +15,7 @@ use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignmentError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateSuccessful;
+use PavanKataria\BoilerplateApi\Traits\HasCustomKeyForIndexing;
 
 /**
  * Class BaseRepository
@@ -94,12 +95,12 @@ abstract class BaseRepository
 
     /**
      * @param array $data
-     * @param string $guid
+     * @param $id
      * @return PKResponseResourceNotFound|PKResponseResourceUpdateError|PKResponseResourceUpdateSuccessful
      */
-    public function update(array $data, $guid)
+    public function update(array $data, $id)
     {
-        $resource = $this->model->whereGuid($guid)->first();
+        $resource = $this->findResource($id);
         if(!$resource){
             return new PKResponseResourceNotFound;
         }
@@ -118,11 +119,11 @@ abstract class BaseRepository
 
     /**
      * @param $id
-     * @return PKResponseResourceDeleteSuccessful|PKResponseResourceNotFound|PKResponseResourceDeleteError
+     * @return PKResponseResourceDeleteError|PKResponseResourceDeleteSuccessful|PKResponseResourceNotFound
      */
     public function delete($id)
     {
-        $resource = $this->model->whereId($id)->first();
+        $resource = $this->findResource($id);
         if(!$resource){
             return new PKResponseResourceNotFound;
         }
@@ -139,52 +140,46 @@ abstract class BaseRepository
      */
     public function find($id, $columns = array('*'))
     {
-        $resource = $this->model->find($id, $columns);
-        if(!$resource){
+        $resource = $this->findResource($id, $columns);
+        if (!$resource) {
             return new PKResponseResourceNotFound;
         }
         return new PKResponseResource($resource);
     }
 
     /**
-     * @param $value
-     * @return PKResponseResource|PKResponseResourceNotFound
+     * @param $id
+     * @param $columns
+     * @return mixed
      */
-    public function findGuid($value){
-        $resource = $this->model->whereGuid($value)->first();
-        if(!$resource){
-            return new PKResponseResourceNotFound;
-        }
-        return new PKResponseResource($resource);
+    private function findResource($id, $columns = array('*'))
+    {
+        $indexKey = $this->getModelIndexKeyName();
+        $resource = $this->findBy($indexKey, $id, $columns);
+        return $resource;
     }
 
+    /**
+     * @return string
+     */
+    private function getModelIndexKeyName()
+    {
+        $indexKey = $this->model->getKeyName();
+        if (in_array(HasCustomKeyForIndexing::class, class_uses($this->model))) {
+            if ($this->model->usesCustomKeyForIndexing()) {
+                $indexKey = $this->model->customKeyForIndexing();
+            }
+        }
+        return $indexKey;
+    }
     /**
      * @param $attribute
      * @param $value
      * @param array $columns
-     * @return PKResponseResource|PKResponseResourceNotFound
+     * @return mixed
      */
-    public function findBy($attribute, $value, $columns = array('*'))
+    private function findBy($attribute, $value, $columns = array('*'))
     {
-
-//        dd($this->model->where("id", "=", $value)->first());
-
-//        $resource = $this->mgit addodel->where($attribute, '=', $value)->first($columns);
-//          dd($resource);
-// WORKS
-//        dd($this->model->whereId($value)->get());
-//        dd($this->model->where('id', '=', $value)->first());
-//        dd($this->model->where('guid', '=', $value)->first());
-//        dd("this: {$this->model}, attribute: {$attribute}, value: {$value}");
-        dd($this->model->whereId(10)->first());
-        $resource = $this->model->where("id", '=', $value)->first($columns);
-
-//        return new PKResponseResource($this->model->whereGuid($value)->first());
-
-        if(!$resource){
-            return new PKResponseResourceNotFound;
-        }
-        return new PKResponseResource($resource);
+        return $this->model->where($attribute, '=', $value)->first($columns);
     }
-
 }

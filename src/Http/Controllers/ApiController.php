@@ -1,6 +1,7 @@
 <?php
 namespace PavanKataria\BoilerplateApi\Http\Controllers;
 
+use League\Fractal\Serializer\JsonApiSerializer;
 use PavanKataria\BoilerplateApi\Http\ApiResponseManager;
 use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use Illuminate\Http\Request;
@@ -55,8 +56,8 @@ class ApiController extends Controller {
      */
     function __construct($repository = null, $transformer = null)
     {
-//        dd("ahaha");
         $this->fractalManager = App::make(Manager::class);
+//        $this->fractalManager->setSerializer(new JsonApiSerializer());
         $this->apiManager = App::make(ApiResponseManager::class);
         $this->request = $this->initialiseRequest();
         $this->queryRepository = $repository;
@@ -72,14 +73,8 @@ class ApiController extends Controller {
      */
     protected function initialiseRequest()
     {
-//        dd(get_called_class());
-        //StudentEnrolmentController -> StudentEnrolmentFormRequest
-
-
         // Find out the method before that called the getRequest method,
         // Whether it was the store or update method.
-
-
         $methodName = debug_backtrace()[1]['function'];
 
         // The custom form request classes set in the child controller classes
@@ -119,11 +114,11 @@ class ApiController extends Controller {
     public function show($id)
     {
         $this->initialiseRequest();
-        $response = $this->queryRepository->findGuid($id);//findBy('guid', $id);
+        $response = $this->queryRepository->find($id);
         if ($response instanceof PKResponseResourceNotFound) {
             return $this->apiManager->respondNotFound('Resource not found.');
         }
-        $itemResource = new Item($response->resource, $this->transformer);
+        $itemResource = new Item($response->resource, $this->transformer, $this->transformer->resourceKey);
         $processedItems = $this->fractalManager->createData($itemResource);
         return $this->apiManager->respond($processedItems->toArray());
     }
@@ -151,10 +146,10 @@ class ApiController extends Controller {
     /**
      * Update the specified resource in storage.
      *
-     * @param  string $guid
+     * @param $id
      * @return Response
      */
-    public function update($guid)
+    public function update($id)
     {
         $requestParameters = $this->initialiseRequest()->all();
         $requestResponse = $this->requestParametersOrFail($requestParameters);
@@ -163,7 +158,7 @@ class ApiController extends Controller {
             return $this->apiManager->returnResponseWithoutResource($requestResponse);
         }
 
-        $response = $this->queryRepository->update($requestResponse, $guid);
+        $response = $this->queryRepository->update($requestResponse, $id);
 
         if( $response instanceof PKResponseResourceNotFound ||
             $response instanceof PKResponseResourceUpdateError ||
@@ -245,7 +240,7 @@ class ApiController extends Controller {
         if (is_null($this->transformer)) {
             return null;
         }
-        $itemsResource = new Collection($items, $transformer ?? $this->transformer);
+        $itemsResource = new Collection($items, $transformer ?? $this->transformer, $this->transformer->resourceKey);
         $processedItems = $this->fractalManager->createData($itemsResource)->toArray();
         return $processedItems;
     }
