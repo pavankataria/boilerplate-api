@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e75f4fcb-c224-40cf-ac38-75130d52d85c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Http/Controllers/ApiController.php" afterPath="$PROJECT_DIR$/src/Http/Controllers/ApiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repositories/BaseRepository.php" afterPath="$PROJECT_DIR$/src/Repositories/BaseRepository.php" />
     </list>
     <ignored path="BoilerplateApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Http/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="250" column="11" selection-start-line="250" selection-start-column="11" selection-end-line="250" selection-end-column="11" />
+            <state relative-caret-position="165">
+              <caret line="250" column="4" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
               <folding>
                 <element signature="e#63#111#0#PHP" expanded="true" />
               </folding>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseEditor.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseEditor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Services/BaseEditor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="257">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
       <file leaf-file-name="BaseRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositories/BaseRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3168">
-              <caret line="99" column="7" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+            <state relative-caret-position="737">
+              <caret line="181" column="1" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
               <folding>
                 <element signature="e#60#101#0#PHP" expanded="true" />
               </folding>
@@ -160,9 +160,9 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Traits/UuidKeyAutoGenerateable.php" />
         <option value="$PROJECT_DIR$/src/Traits/HasCustomKeyForIndexing.php" />
+        <option value="$PROJECT_DIR$/src/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/src/Repositories/BaseRepository.php" />
         <option value="$PROJECT_DIR$/src/Services/BaseEditor.php" />
-        <option value="$PROJECT_DIR$/src/Http/Controllers/ApiController.php" />
       </list>
     </option>
   </component>
@@ -356,12 +356,12 @@
       <workItem from="1486705450050" duration="1036000" />
       <workItem from="1486741782574" duration="1169000" />
       <workItem from="1486760749085" duration="2931000" />
-      <workItem from="1487024381149" duration="29000" />
+      <workItem from="1487024381149" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14981000" />
+    <option name="totallyTimeSpent" value="15243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1143" y="-1231" width="1651" height="1060" extended-state="0" />
@@ -783,10 +783,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/Controllers/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="250" column="4" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
+          <folding>
+            <element signature="e#63#111#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositories/BaseRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
-          <caret line="99" column="7" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+        <state relative-caret-position="737">
+          <caret line="181" column="1" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
           <folding>
             <element signature="e#60#101#0#PHP" expanded="true" />
           </folding>
@@ -795,19 +805,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Services/BaseEditor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="257">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/Controllers/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="250" column="11" selection-start-line="250" selection-start-column="11" selection-end-line="250" selection-end-column="11" />
-          <folding>
-            <element signature="e#63#111#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

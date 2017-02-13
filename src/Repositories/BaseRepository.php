@@ -17,10 +17,6 @@ use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateMassAssignment
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceUpdateSuccessful;
 use PavanKataria\BoilerplateApi\Traits\HasCustomKeyForIndexing;
 
-/**
- * Class BaseRepository
- * @package App\Repositories
- */
 abstract class BaseRepository
 {
     /** @var Model */
@@ -152,7 +148,7 @@ abstract class BaseRepository
      * @param $columns
      * @return mixed
      */
-    private function findResource($id, $columns = array('*'))
+    protected function findResource($id, $columns = array('*'))
     {
         $indexKey = $this->getModelIndexKeyName();
         $resource = $this->findBy($indexKey, $id, $columns);
@@ -172,6 +168,7 @@ abstract class BaseRepository
         }
         return $indexKey;
     }
+
     /**
      * @param $attribute
      * @param $value
