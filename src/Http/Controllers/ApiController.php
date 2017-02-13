@@ -118,11 +118,13 @@ class ApiController extends Controller {
         if ($response instanceof PKResponseResourceNotFound) {
             return $this->apiManager->respondNotFound('Resource not found.');
         }
+        if(is_null($this->transformer)){
+            return $this->respondWithArray($response->resource);
+        }
         $itemResource = new Item($response->resource, $this->transformer, $this->transformer->resourceKey);
         $processedItems = $this->fractalManager->createData($itemResource);
         return $this->apiManager->respond($processedItems->toArray());
     }
-
 
     /**
      * @return mixed
