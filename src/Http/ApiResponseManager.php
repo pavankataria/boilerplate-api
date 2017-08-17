@@ -122,6 +122,15 @@ class ApiResponseManager {
     {
         return $this->setStatusCode(400)->respondWithError($message);
     }
+
+    /**
+     * @param string $message
+     * @return mixed
+     */
+    public function respondUnprocessableEntity($message = 'The server understands the content type of the request entity but was unable to process the contained instructions')
+    {
+        return $this->setStatusCode(422)->respondWithError($message);
+    }
     /**
      * @param string $message
      * @return mixed
