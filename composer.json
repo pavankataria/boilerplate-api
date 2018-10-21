@@ -13,7 +13,7 @@
         "ramsey/uuid": "^3.5",
         "league/fractal": "^0.15.0"
     },
-    "license": "GNU GPLv3",
+    "license": "MIT",
     "authors": [
         {
             "name": "Pavan Kataria",
