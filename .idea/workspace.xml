@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e75f4fcb-c224-40cf-ac38-75130d52d85c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Http/Requests/BaseRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Requests/BaseRequest.php" afterDir="false" />
     </list>
     <ignored path="BoilerplateApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -24,17 +24,20 @@
     <session id="123001982">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="1" />
+          <entry key="php" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="PHP" value="1" />
           <entry key="composer.json" value="1" />
         </counts>
       </usages-collector>
@@ -54,26 +57,7 @@
     <favorites_list name="BoilerplateApi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Http/ApiResponseManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,7 +83,6 @@
         <option value="$PROJECT_DIR$/src/Responses/PKResponseResourceCreateSuccessful.php" />
         <option value="$PROJECT_DIR$/src/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/src/Requests/BaseRequest.php" />
-        <option value="$PROJECT_DIR$/src/Http/Requests/BaseRequest.php" />
         <option value="$PROJECT_DIR$/src/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/src/Traits/UuidKeyAutoGenerateable.php" />
         <option value="$PROJECT_DIR$/src/Traits/HasCustomKeyForIndexing.php" />
@@ -108,6 +91,7 @@
         <option value="$PROJECT_DIR$/src/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/src/Http/ApiResponseManager.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Http/Requests/BaseRequest.php" />
       </list>
     </option>
   </component>
@@ -146,6 +130,13 @@
               <item name="boilerplate-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boilerplate-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boilerplate-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,24 +211,21 @@
       <workItem from="1491224512648" duration="1188000" />
       <workItem from="1491517230908" duration="305000" />
       <workItem from="1491517839792" duration="35000" />
-      <workItem from="1540132710347" duration="662000" />
+      <workItem from="1540132710347" duration="1117000" />
+      <workItem from="1540160830098" duration="174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21072000" />
+    <option name="totallyTimeSpent" value="21701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.27181688" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Gulp" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Atlassian " />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="0" visible="true" weight="0.32950193" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -252,6 +240,9 @@
       <window_info anchor="bottom" id="Application Servers" order="11" />
       <window_info anchor="bottom" id="Changes" order="12" />
       <window_info anchor="bottom" id="Floobits" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Atlassian " order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -392,13 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/Requests/BaseRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Resource/Collection.php" />
     <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Resource/Item.php" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php" />
@@ -478,17 +462,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/ApiResponseManager.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        <state relative-caret-position="216">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/src/Http/Requests/BaseRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="1166">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#151#194#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/ApiResponseManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="126" column="17" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
         </state>
       </provider>
     </entry>
