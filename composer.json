@@ -23,9 +23,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "orchestra/testbench": "^3.4",
-        "phpunit/phpcov": "~3.0",
-        "phpunit/phpunit": "~6.0"
+        "orchestra/testbench": "3.*",
+        "phpunit/phpcov": "~5.0",
+        "phpunit/phpunit": "~7.0"
     },
     "autoload": {
         "psr-4" : {
