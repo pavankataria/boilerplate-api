@@ -10,7 +10,7 @@
     "type": "library",
     "require": {
         "laravel/framework": "^9.2",
-        "ramsey/uuid": "^3.5",
+        "ramsey/uuid": "^4.2",
         "league/fractal": "^0.15.0"
     },
     "license": "MIT",
