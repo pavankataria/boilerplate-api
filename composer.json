@@ -9,7 +9,7 @@
     "description": "Boiler plate classes aiding API creation for Laravel, Lumen, and all your other PHP projects.",
     "type": "library",
     "require": {
-        "laravel/framework": "^9.2",
+        "laravel/framework": "^8.*",
         "ramsey/uuid": "^4.2",
         "league/fractal": "^0.15.0"
     },
