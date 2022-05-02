@@ -1,14 +1,14 @@
 <?php
 namespace PavanKataria\BoilerplateApi\Http\Controllers;
 
-use PavanKataria\BoilerplateApi\Http\ApiResponseManager;
-use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Item;
 use League\Fractal\Resource\Collection;
-
+use PavanKataria\BoilerplateApi\Http\ApiResponseManager;
+use PavanKataria\BoilerplateApi\Http\ApiDataArraySerializer;
+use PavanKataria\BoilerplateApi\Responses\PKResponseBadRequest;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceNotFound;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateError;
 use PavanKataria\BoilerplateApi\Responses\PKResponseResourceCreateSuccessful;
@@ -56,6 +56,7 @@ class ApiController extends Controller {
     function __construct($repository = null, $transformer = null)
     {
         $this->fractalManager = App::make(Manager::class);
+        $this->fractalManager->setSerializer(new ApiDataArraySerializer());
         $this->apiManager = App::make(ApiResponseManager::class);
         $this->request = $this->initialiseRequest();
         $this->queryRepository = $repository;
@@ -79,7 +80,7 @@ class ApiController extends Controller {
         // and see if any classes have been set for the method. If not then
         // use the default Illuminate\request class to capture the data.
         $requestClasses = $this->requestClasses;
-        $class = array_get($requestClasses, $methodName, Request::class);
+        $class = \Arr::get($requestClasses, $methodName, Request::class);
         // Instantiate the request class
         return App::make($class);
     }
@@ -152,7 +153,6 @@ class ApiController extends Controller {
     {
         $requestParameters = $this->initialiseRequest()->all();
         $requestResponse = $this->requestParametersOrFail($requestParameters);
-
         if ($requestResponse instanceOf PKResponseBadRequest) {
             return $this->apiManager->returnResponseWithoutResource($requestResponse);
         }
